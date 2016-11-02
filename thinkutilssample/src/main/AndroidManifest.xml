@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.thinkman.thinkutilssample">
+
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity
+            android:name=".MainActivity"
+            android:label="@string/app_name"
+            android:windowSoftInputMode="stateAlwaysHidden"
+            android:theme="@style/AppTheme.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".ProgressActivity"
+            android:label="@string/title_activity_progress"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".LoginActivity"
+            android:label="@string/title_activity_login"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name=".ThinkRecyclerViewActivity" />
+        <activity
+            android:name=".CustomBarActivity"
+            android:label="@string/title_activity_custom_bar"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name=".GuideActivity" />
+        <activity
+            android:name=".FragmentActivity"
+            android:label="@string/title_activity_fragment"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".DetailActivity"
+            android:label="@string/title_activity_detail"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".models.FlowLayoutActivity"
+            android:label="@string/title_activity_flow_layout"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name=".HighLightActivity" />
+        <activity
+            android:name=".TranslucentActivity"
+            android:label="@string/title_activity_translucent" />
+        <activity
+            android:name=".UpdateStatusBarColorActivity"
+            android:theme="@style/AppTheme.NoNoTitle" />
+        <activity android:name=".SwipeDeleteActivity" />
+        <activity android:name=".ShopActivity" />
+        <activity
+            android:name=".ThinkRecyclerViewScrollingActivity"
+            android:label="@string/title_activity_think_recycler_view_scrolling"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".ScrollingActivity"
+            android:label="@string/title_activity_scrolling"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name=".GroupButtonActivity"></activity>
+    </application>
+
+</manifest>

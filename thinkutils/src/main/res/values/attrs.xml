@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="CircleImageView">
+        <attr name="civ_border_width" format="dimension" />
+        <attr name="civ_border_color" format="color" />
+        <attr name="civ_border_overlay" format="boolean" />
+        <attr name="civ_fill_color" format="color" />
+    </declare-styleable>
+
+    <declare-styleable name="ProgressLayout">
+        <!--正在加载-->
+        <attr name="loading_layout" format="integer"/>
+        <!--无内容-->
+        <attr name="none_content" format="integer"/>
+        <!--网络错误-->
+        <attr name="network_content" format="integer"/>
+        <!--加载失败-->
+        <attr name="failed_content" format="integer"/>
+    </declare-styleable>
+
+    <attr name="progressLayoutDefStyle" format="reference"/>
+
+    <declare-styleable name="PasswordView">
+        <attr name="showPasswordIcon" format="reference" />
+        <attr name="hidePasswordIcon" format="reference" />
+        <attr name="iconPosition" format="enum">
+            <enum name="left" value="0" />
+            <enum name="right" value="1" />
+        </attr>
+        <attr name="fontPath" format="string" />
+    </declare-styleable>
+
+    <declare-styleable name="LoginView">
+        <attr name="loginBtnBDRes" format="reference" />
+        <attr name="loginBtnLabel" format="reference" />
+        <attr name="accountLabel" format="reference" />
+        <attr name="accountHint" format="reference" />
+        <attr name="passwordText" format="reference" />
+        <attr name="passwordHint" format="reference" />
+        <attr name="forgetPwdLabel" format="reference" />
+        <attr name="registerLabel" format="reference" />
+    </declare-styleable>
+
+    <declare-styleable name="ImagePickerView">
+        <attr name="maxCount" format="integer|reference" />
+    </declare-styleable>
+
+
+    <attr name="labelText" format="string|reference"/>
+    <attr name="labelTextSize" format="reference"/>
+    <attr name="labelColor" format="reference"/>
+    <attr name="contentText" format="string|reference"/>
+    <attr name="contentTextSize" format="reference"/>
+    <attr name="contentColor" format="reference"/>
+    <attr name="hintColor" format="reference"/>
+    <attr name="hintText" format="string|reference"/>
+    <attr name="isPassword" format="boolean"/>
+
+    <attr name="hasLeftIcon" format="boolean" />
+    <attr name="leftIconDrawable" format="color|reference" />
+    <attr name="hasRightIcon" format="boolean" />
+    <attr name="rightIconDrawable" format="color|reference" />
+    <attr name="contentHint" format="string" />
+    <attr name="hintTextSize" format="dimension|reference" />
+    <attr name="noticeText" format="string|reference" />
+    <attr name="noticeTextSize" format="dimension" />
+    <attr name="noticeColor" format="color" />
+    <attr name="clickable" format="boolean" />
+    <attr name="hasUnderBar" format="boolean" />
+    <attr name="maxLength" format="integer" />
+
+
+    <declare-styleable name="CommonEditTextLine">
+        <attr name="labelText" />
+        <attr name="labelTextSize" />
+        <attr name="labelColor" />
+        <attr name="contentText" />
+        <attr name="contentTextSize" />
+        <attr name="contentColor" />
+        <attr name="hintColor" />
+        <attr name="hintText" />
+        <attr name="isPassword" />
+        <!--直接使用系统中已定义的语意明确的属性，不用设置format-->
+        <attr name="android:inputType" />
+    </declare-styleable>
+
+    <declare-styleable name="CommonPasswordLine">
+        <attr name="labelText" />
+        <attr name="labelTextSize" />
+        <attr name="labelColor" />
+        <attr name="contentText" />
+        <attr name="contentTextSize" />
+        <attr name="hintColor" />
+        <attr name="hintText" />
+    </declare-styleable>
+
+    <declare-styleable name="CustomBar">
+        <attr name="hasLeftIcon" />
+        <attr name="leftIconDrawable" />
+        <attr name="hasRightIcon" />
+        <attr name="rightIconDrawable" />
+        <attr name="labelText" />
+        <attr name="labelTextSize" />
+        <attr name="labelColor" />
+        <attr name="contentText" />
+        <attr name="contentTextSize" />
+        <attr name="contentColor" />
+        <attr name="hintText" />
+        <attr name="hintTextSize" />
+        <attr name="hintColor" />
+        <attr name="hasUnderBar" />
+        <attr name="clickable" />
+        <attr name="contentHint" />
+    </declare-styleable>
+
+    <declare-styleable name="CustomEditBar">
+        <attr name="labelText" />
+        <attr name="labelTextSize" />
+        <attr name="labelColor" />
+        <attr name="contentText" />
+        <attr name="contentTextSize" />
+        <attr name="contentColor" />
+        <attr name="hintColor" />
+        <attr name="hintText" />
+        <attr name="hasUnderBar" />
+        <attr name="isPassword" />
+        <attr name="hasRightIcon" />
+        <attr name="rightIconDrawable" />
+        <attr name="leftIconDrawable"/>
+        <!--直接使用系统中已定义的语意明确的属性，不用设置format-->
+        <attr name="android:inputType" />
+    </declare-styleable>
+
+    <declare-styleable name="CustomNoteBar">
+        <attr name="labelText" />
+        <attr name="labelTextSize" />
+        <attr name="labelColor" />
+        <attr name="noticeText" />
+        <attr name="noticeTextSize" />
+        <attr name="noticeColor" />
+        <attr name="hintColor" />
+        <attr name="hintText" />
+        <attr name="hasUnderBar" />
+        <attr name="maxLength" />
+    </declare-styleable>
+
+    <declare-styleable name="CommonHorizontalAttachBar">
+        <attr name="labelColor" />
+        <attr name="labelTextSize" />
+    </declare-styleable>
+
+    <declare-styleable name="FlowLayout">
+        <attr name="horizontal_spacing" format="dimension" />
+        <attr name="vertical_spacing" format="dimension" />
+    </declare-styleable>
+
+    <declare-styleable name="SearchEditText">
+        <attr name="hintColor" />
+        <attr name="hintText" />
+
+        <attr name="android:textColor" />
+        <attr name="android:textSize" />
+        <attr name="android:inputType" />
+    </declare-styleable>
+
+    <declare-styleable name="NumberButton">
+        <attr name="editable" format="boolean"/>
+        <attr name="buttonWidth" format="dimension" />
+        <attr name="textWidth" format="dimension" />
+        <attr name="textSize" format="dimension"/>
+        <attr name="textColor" format="color"/>
+    </declare-styleable>
+
+    <declare-styleable name="ImageText">
+        <attr name="image" format="reference"/>
+        <attr name="labelText" />
+        <attr name="labelTextSize" />
+        <attr name="labelColor" />
+    </declare-styleable>
+</resources>
