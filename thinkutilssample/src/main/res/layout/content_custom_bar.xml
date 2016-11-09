@@ -53,6 +53,13 @@
             thinkutils:labelText="hehe"
             thinkutils:hintText="HAHA"/>
 
+        <com.thinkman.thinkutils.view.CustomToggleBar
+            android:id="@+id/ctb_on_off"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            thinkutils:labelText="开关"
+            android:background="@android:color/white"/>
+
         <com.thinkman.thinkutils.view.CommonHorizontalAttachBar
             android:id="@+id/chab_attachment"
             android:layout_width="match_parent"
@@ -61,12 +68,7 @@
             android:background="@android:color/white"
             thinkutils:labelColor="@android:color/black" />
 
-        <com.thinkman.thinkutils.view.CustomToggleBar
-            android:id="@+id/ctb_on_off"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            thinkutils:labelText="开关"
-            android:background="@android:color/white"/>
+
 
         <com.thinkman.thinkutils.view.CommonMultiLineAttachBar
             android:id="@+id/cab_photos"

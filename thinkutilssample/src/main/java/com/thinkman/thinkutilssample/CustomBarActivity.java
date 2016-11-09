@@ -12,6 +12,8 @@ import com.thinkman.thinkutils.commonutils.ToastUtils;
 import com.thinkman.thinkutils.view.CircleImageText;
 import com.thinkman.thinkutils.view.CommonHorizontalAttachBar;
 import com.thinkman.thinkutils.view.CommonMultiLineAttachBar;
+import com.thinkman.thinkutils.view.CustomToggleBar;
+import com.zcw.togglebutton.ToggleButton;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -24,6 +26,9 @@ public class CustomBarActivity extends ThinkBaseActivity {
 
     @BindView(R.id.cab_photos)
     CommonMultiLineAttachBar m_cabPhotos = null;
+
+    @BindView(R.id.ctb_on_off)
+    CustomToggleBar m_ctbOnOff = null;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -39,6 +44,13 @@ public class CustomBarActivity extends ThinkBaseActivity {
     private void init() {
         initAttachBar();
         initMultiLineAttachBar();
+
+        m_ctbOnOff.setOnToggleChangedListener(new ToggleButton.OnToggleChanged() {
+            @Override
+            public void onToggle(boolean on) {
+                ToastUtils.showToast(CustomBarActivity.this, "" + on);
+            }
+        });
     }
 
     private void initMultiLineAttachBar() {

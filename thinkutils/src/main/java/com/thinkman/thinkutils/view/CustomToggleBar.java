@@ -154,6 +154,18 @@ public class CustomToggleBar extends FrameLayout {
         m_tbOnOff.toggle();
     }
 
+    public void setToggleOn() {
+        m_tbOnOff.setToggleOn();
+    }
+
+    public void setToggleOff() {
+        m_tbOnOff.setToggleOff();
+    }
+
+    public ToggleButton getToggleButton() {
+        return m_tbOnOff;
+    }
+
     public void setOnToggleChangedListener(ToggleButton.OnToggleChanged listener) {
         m_tbOnOff.setOnToggleChanged(listener);
     }
