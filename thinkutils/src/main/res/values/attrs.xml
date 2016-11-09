@@ -113,6 +113,18 @@
         <attr name="contentHint" />
     </declare-styleable>
 
+    <declare-styleable name="CustomToggleBar">
+        <attr name="hasLeftIcon" />
+        <attr name="leftIconDrawable" />
+        <attr name="hasRightIcon" />
+        <attr name="rightIconDrawable" />
+        <attr name="labelText" />
+        <attr name="labelTextSize" />
+        <attr name="labelColor" />
+        <attr name="hasUnderBar" />
+        <attr name="clickable" />
+    </declare-styleable>
+
     <declare-styleable name="CustomEditBar">
         <attr name="labelText" />
         <attr name="labelTextSize" />

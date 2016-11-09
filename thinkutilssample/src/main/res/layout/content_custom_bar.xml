@@ -61,12 +61,21 @@
             android:background="@android:color/white"
             thinkutils:labelColor="@android:color/black" />
 
+        <com.thinkman.thinkutils.view.CustomToggleBar
+            android:id="@+id/ctb_on_off"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            thinkutils:labelText="开关"
+            android:background="@android:color/white"/>
+
         <com.thinkman.thinkutils.view.CommonMultiLineAttachBar
             android:id="@+id/cab_photos"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="12dp"
             android:background="@android:color/white"/>
+
+
     </LinearLayout>
 </com.thinkman.thinkutils.view.VerticalScrollView>
 
