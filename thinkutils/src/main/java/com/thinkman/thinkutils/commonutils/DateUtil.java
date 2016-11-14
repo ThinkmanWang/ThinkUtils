@@ -67,7 +67,7 @@ public class DateUtil
 
     //将long字符串转换成格式时间输出
     public static String  getTime(long timestamp){
-        return getTime(timestamp * 1000,"yyyy-MM-dd HH:mm:ss");
+        return getTime(timestamp,"yyyy-MM-dd HH:mm:ss");
     }
 
     //将long字符串转换成格式时间输出
