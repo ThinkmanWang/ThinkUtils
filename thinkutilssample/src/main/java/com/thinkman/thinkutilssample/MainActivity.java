@@ -22,10 +22,13 @@ import butterknife.ButterKnife;
 
 import com.bigkoo.pickerview.OptionsPickerView;
 import com.bigkoo.pickerview.TimePickerView;
+import com.bumptech.glide.Glide;
 import com.thinkman.thinkutils.activity.BaseActivityWithActionBar;
 import com.thinkman.thinkutils.activity.ThinkBaseActivity;
+import com.thinkman.thinkutils.commonutils.GlideRoundTransform;
 import com.thinkman.thinkutils.commonutils.ToastUtils;
 import com.thinkman.thinkutils.dialog.CommonDialogUtils;
+import com.thinkman.thinkutils.view.CircleImageView;
 import com.thinkman.thinkutils.view.ImagePickerView;
 import com.thinkman.thinkutils.view.SearchEditText;
 import com.thinkman.thinkutils.view.ThinkHorizontalScrollView;
@@ -89,6 +92,9 @@ public class MainActivity extends BaseActivityWithActionBar {
     private ArrayList<ProvinceBean> options1Items = new ArrayList<ProvinceBean>();
     private ArrayList<ArrayList<String>> options2Items = new ArrayList<ArrayList<String>>();
     private ArrayList<ArrayList<ArrayList<String>>> options3Items = new ArrayList<ArrayList<ArrayList<String>>>();
+
+    @BindView(R.id.iv_avatar)
+    CircleImageView m_ivAvatar = null;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -199,6 +205,8 @@ public class MainActivity extends BaseActivityWithActionBar {
         });
 
         initAreaPicker();
+
+        Glide.with(this).load("https://www.baidu.com/img/bdlogo.png").transform(new GlideRoundTransform(this)).into(m_ivAvatar);
     }
 
     public void initAreaPicker() {

@@ -68,8 +68,6 @@
             android:background="@android:color/white"
             thinkutils:labelColor="@android:color/black" />
 
-
-
         <com.thinkman.thinkutils.view.CommonMultiLineAttachBar
             android:id="@+id/cab_photos"
             android:layout_width="match_parent"
@@ -77,6 +75,14 @@
             android:layout_marginTop="12dp"
             android:background="@android:color/white"/>
 
+        <com.thinkman.thinkutils.view.CustomEditBar
+            android:id="@+id/cb_order_no"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            thinkutils:labelText="FXXK"
+            thinkutils:hintText="请输入订单编号"
+            thinkutils:hasRightIcon="true"
+            />
 
     </LinearLayout>
 </com.thinkman.thinkutils.view.VerticalScrollView>

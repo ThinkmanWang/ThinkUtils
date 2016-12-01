@@ -153,11 +153,13 @@ public class CustomEditBar extends FrameLayout {
         }
 
         leftIconDrawable = a.getDrawable(R.styleable.CustomEditBar_leftIconDrawable);
-        if (leftIconDrawable != null) {
-            iconLeft.setImageDrawable(leftIconDrawable);
-            iconLeft.setVisibility(VISIBLE);
-        } else {
-            iconLeft.setVisibility(GONE);
+        if (iconLeft != null) {
+            if (leftIconDrawable != null) {
+                iconLeft.setImageDrawable(leftIconDrawable);
+                iconLeft.setVisibility(VISIBLE);
+            } else {
+                iconLeft.setVisibility(GONE);
+            }
         }
 
         a.recycle();
