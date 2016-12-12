@@ -1,5 +1,6 @@
 package com.thinkman.thinkutils.view;
 
+import android.app.Activity;
 import android.content.Context;
 import android.util.AttributeSet;
 import android.view.View;
@@ -7,46 +8,72 @@ import android.webkit.WebView;
 import android.webkit.WebViewClient;
 import android.widget.ProgressBar;
 
+import com.gzsll.jsbridge.WVJBWebView;
+import com.gzsll.jsbridge.WVJBWebViewClient;
+
 import java.util.Stack;
 
-public class ProgressWebView extends WebView implements View.OnClickListener {
+public class ProgressWebView extends WVJBWebView implements View.OnClickListener {
     private ProgressBar mProgressbar;
+
+    private Context mContext = null;
 
     public ProgressWebView(Context context) {
         super(context);
-        init();
+        init(context);
     }
 
     public ProgressWebView(Context context, AttributeSet attrs) {
         super(context, attrs);
-        init();
+        init(context);
     }
 
     public ProgressWebView(Context context, AttributeSet attrs, int defStyle) {
         super(context, attrs, defStyle);
-        init();
+        init(context);
     }
 
-    public void init() {
+    private CustomWebViewClient mWebViewClient = null;
+    public void init(Context context) {
         addProgressBar();
         setWebChromeClient(new WebChromeClient());
+        mWebViewClient = new CustomWebViewClient(this);
         setWebViewClient(mWebViewClient);
 
         getSettings().setJavaScriptEnabled(true);
         getSettings().setDomStorageEnabled(true);
         getSettings().setBlockNetworkImage(false);
+
     }
 
-    WebViewClient mWebViewClient = new WebViewClient() {
-        public boolean shouldOverrideUrlLoading(WebView view, String url) {
+//    WebViewClient mWebViewClient = new WebViewClient() {
+//        public boolean shouldOverrideUrlLoading(WebView view, String url) {
+//
+//            return false;
+//        }
+//
+//        public void onPageFinished(WebView view, String url) {
+//
+//        }
+//    };
 
-            return false;
+    public class CustomWebViewClient extends WVJBWebViewClient {
+
+        public CustomWebViewClient(WVJBWebView webView) {
+            super(webView);
+        }
+
+        @Override
+        public boolean shouldOverrideUrlLoading(WebView view, String url) {
+            //  do your work here
+            // ...
+            return super.shouldOverrideUrlLoading(view, url);
         }
 
         public void onPageFinished(WebView view, String url) {
 
         }
-    };
+    }
 
     @SuppressWarnings("deprecation")
     private void addProgressBar() {

@@ -460,4 +460,10 @@ public class MainActivity extends BaseActivityWithActionBar {
         Intent intent = new Intent(MainActivity.this, GroupButtonActivity.class);
         this.startActivity(intent);
     }
+
+    @OnClick(R.id.btn_web_view)
+    public void onWebViewClick() {
+        Intent intent = new Intent(MainActivity.this, WebViewActivity.class);
+        this.startActivity(intent);
+    }
 }

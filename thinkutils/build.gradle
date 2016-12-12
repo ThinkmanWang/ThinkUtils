@@ -3,7 +3,7 @@ apply plugin: 'com.android.library'
 apply plugin: 'com.neenbedankt.android-apt'
 apply plugin: 'com.novoda.bintray-release'
 
-version = "1.6.53"
+version = "1.6.55"
 android {
     compileSdkVersion 23
     buildToolsVersion "23.0.3"
@@ -11,7 +11,7 @@ android {
     defaultConfig {
         minSdkVersion 17
         targetSdkVersion 23
-        versionCode 113
+        versionCode 115
         versionName version
     }
     buildTypes {
@@ -55,6 +55,7 @@ dependencies {
     compile 'com.nostra13.universalimageloader:universal-image-loader:1.9.5'
     apt 'com.jakewharton:butterknife-compiler:8.0.1'
     compile 'com.zcw:togglebutton-library:1.0.0'
+    compile 'com.gzsll.jsbridge:library:1.1.0'
     //compile 'in.srain.cube:ptr-load-more:1.0.3'
     //compile project(':galleryfinal')
     //compile project(':ptr-lib')
@@ -64,7 +65,7 @@ publish {
     userOrg = 'thinkman'
     groupId = 'com.thinkman.thinkutils'
     artifactId = 'thinkutils'
-    publishVersion = '1.6.53'
+    publishVersion = '1.6.55'
     desc = 'Thinkman ThinkUtils'
     website = 'https://github.com/ThinkmanWang/ThinkNews'
 }
