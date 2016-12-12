@@ -30,6 +30,14 @@ public class SearchEditText extends LinearLayout {
     private EditText m_etContent = null;
     private ImageView m_ivRight = null;
 
+    public ImageView getImageViewLeft() {
+        return m_ivLeft;
+    }
+
+    public ImageView getImageViewRight() {
+        return m_ivRight;
+    }
+
     public SearchEditText(Context context) {
         super(context);
         init(context, null, 0);
