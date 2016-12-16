@@ -46,6 +46,14 @@ public class NumberButton extends LinearLayout implements View.OnClickListener, 
         this(context, null);
     }
 
+    public TextView getSubButtom() {
+        return (TextView) findViewById(R.id.button_sub);
+    }
+
+    public TextView getAddButtom() {
+        return (TextView) findViewById(R.id.button_add);
+    }
+
     public NumberButton(Context context, AttributeSet attrs) {
         super(context, attrs);
         init(context, attrs);
@@ -106,6 +114,13 @@ public class NumberButton extends LinearLayout implements View.OnClickListener, 
 
     @Override
     public void onClick(View v) {
+
+        if (this.isEnabled()) {
+
+        } else {
+            return;
+        }
+
         int id = v.getId();
         int count = getNumber();
         if (id == R.id.button_sub) {
