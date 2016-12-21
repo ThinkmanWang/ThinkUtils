@@ -172,6 +172,12 @@
         android:layout_height="wrap_content"
         android:text="Web View"/>
 
+    <Button
+        android:id="@+id/btn_facebook_image_grid"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Facebook Image"/>
+
 
 </LinearLayout>
 

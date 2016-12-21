@@ -466,4 +466,10 @@ public class MainActivity extends BaseActivityWithActionBar {
         Intent intent = new Intent(MainActivity.this, WebViewActivity.class);
         this.startActivity(intent);
     }
+
+    @OnClick(R.id.btn_facebook_image_grid)
+    public void onFacebookClick() {
+        Intent intent = new Intent(MainActivity.this, FacebookImageActivity.class);
+        this.startActivity(intent);
+    }
 }
