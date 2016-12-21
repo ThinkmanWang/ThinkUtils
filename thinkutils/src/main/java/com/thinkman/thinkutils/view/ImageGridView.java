@@ -140,7 +140,9 @@ public class ImageGridView extends RelativeLayout {
     }
 
     public void initImageList(List<PhotoInfo> lstPhotos) {
+        mAdapter.clear();
         mAdapter.addAll(lstPhotos);
+        mAdapter.notifyDataSetChanged();
     }
 
     FunctionConfig mFunctionConfig = null;

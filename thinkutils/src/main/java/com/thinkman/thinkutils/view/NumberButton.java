@@ -54,6 +54,10 @@ public class NumberButton extends LinearLayout implements View.OnClickListener, 
         return (TextView) findViewById(R.id.button_add);
     }
 
+    public EditText getEditText() {
+        return mCount;
+    }
+
     public NumberButton(Context context, AttributeSet attrs) {
         super(context, attrs);
         init(context, attrs);
