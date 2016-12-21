@@ -13,6 +13,7 @@ import com.at.facebooktypeimagegrid.Assymetric.AsymmetricRecyclerViewAdapter;
 import com.at.facebooktypeimagegrid.Assymetric.Utils;
 import com.at.facebooktypeimagegrid.adapter.ChildAdapter;
 import com.at.facebooktypeimagegrid.model.ItemList;
+import com.thinkman.thinkutils.commonutils.ToastUtils;
 import com.thinkman.thinkutilssample.R;
 
 import java.util.List;
@@ -69,6 +70,12 @@ public class FacebookImageAdapter extends RecyclerView.Adapter<FacebookImageAdap
         holder.tvTitle.setText(Html.fromHtml(title));
         ChildAdapter adapter = new ChildAdapter(item.getImages(),mDisplay,mTotal);
         holder.recyclerView.setAdapter(new AsymmetricRecyclerViewAdapter<>(mCon, holder.recyclerView, adapter));
+        holder.recyclerView.setOnItemClickListener(new AsymmetricRecyclerView.OnItemClickListener() {
+            @Override
+            public void onItemClick(View convertView, int position) {
+                ToastUtils.showToast(mCon, "FXXK " + position);
+            }
+        });
     }
  
     @Override

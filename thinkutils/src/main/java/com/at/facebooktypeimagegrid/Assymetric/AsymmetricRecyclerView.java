@@ -35,7 +35,7 @@ public class AsymmetricRecyclerView extends RecyclerView implements AsymmetricVi
   @Override public void setAdapter(@NonNull Adapter adapter) {
     if (!(adapter instanceof AsymmetricRecyclerViewAdapter)) {
       throw new UnsupportedOperationException(
-          "Adapter must be an instance of AsymmetricRecyclerViewAdapter");
+              "Adapter must be an instance of AsymmetricRecyclerViewAdapter");
     }
 
     this.adapter = (AsymmetricRecyclerViewAdapter<?>) adapter;
@@ -61,7 +61,26 @@ public class AsymmetricRecyclerView extends RecyclerView implements AsymmetricVi
     return viewImpl.isAllowReordering();
   }
 
+  public interface OnItemClickListener {
+    /**
+     * on item click call back
+     *
+     * @param convertView convertView
+     * @param position position
+     */
+    void onItemClick(View convertView, int position);
+  }
+
+  OnItemClickListener m_cbItemClickListener = null;
+
+  public void setOnItemClickListener(@NonNull OnItemClickListener listener) {
+    m_cbItemClickListener = listener;
+  }
+
   @Override public void fireOnItemClick(int index, View v) {
+    if (m_cbItemClickListener != null) {
+      m_cbItemClickListener.onItemClick(v, index);
+    }
   }
 
   @Override public boolean fireOnItemLongClick(int index, View v) {
