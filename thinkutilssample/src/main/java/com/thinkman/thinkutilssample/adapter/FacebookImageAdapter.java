@@ -69,6 +69,7 @@ public class FacebookImageAdapter extends RecyclerView.Adapter<FacebookImageAdap
         String title = "FXXK";
         holder.tvTitle.setText(Html.fromHtml(title));
         ChildAdapter adapter = new ChildAdapter(item.getImages(),mDisplay,mTotal);
+//        holder.recyclerView.setAdapter(adapter);
         holder.recyclerView.setAdapter(new AsymmetricRecyclerViewAdapter<>(mCon, holder.recyclerView, adapter));
         holder.recyclerView.setOnItemClickListener(new AsymmetricRecyclerView.OnItemClickListener() {
             @Override

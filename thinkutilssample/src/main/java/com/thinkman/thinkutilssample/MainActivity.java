@@ -472,4 +472,10 @@ public class MainActivity extends BaseActivityWithActionBar {
         Intent intent = new Intent(MainActivity.this, FacebookImageActivity.class);
         this.startActivity(intent);
     }
+
+    @OnClick(R.id.btn_more_textview)
+    public void onMoreTextViewClick() {
+        Intent intent = new Intent(MainActivity.this, MoreTextViewActivity.class);
+        this.startActivity(intent);
+    }
 }

@@ -68,7 +68,8 @@
             android:theme="@style/AppTheme.NoActionBar" />
         <activity android:name=".GroupButtonActivity" />
         <activity android:name=".WebViewActivity" />
-        <activity android:name=".FacebookImageActivity"></activity>
+        <activity android:name=".FacebookImageActivity" />
+        <activity android:name=".MoreTextViewActivity"></activity>
     </application>
 
 </manifest>

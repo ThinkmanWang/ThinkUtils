@@ -22,6 +22,7 @@ import com.nostra13.universalimageloader.core.assist.QueueProcessingType;
 import com.thinkman.thinkutils.R;
 import com.thinkman.thinkutils.adapter.ImagePicketAdapter;
 import com.thinkman.thinkutils.commonutils.ToastUtils;
+import com.thinkman.thinkutils.imagepreview.activity.ImagePreviewActivity;
 import com.thinkman.thinkutils.listener.GlidePauseOnScrollListener;
 import com.thinkman.thinkutils.loader.GlideImageLoader;
 
@@ -124,8 +125,9 @@ public class ImageGridView extends RelativeLayout {
 
                 } else {
                     //show preview
-                    Intent intent = new Intent(mContext, PhotoPreviewActivity.class);
+                    Intent intent = new Intent(mContext, ImagePreviewActivity.class);
                     intent.putExtra("photo_list", (ArrayList<PhotoInfo>) getSelectedPhotos());
+                    intent.putExtra(ImagePreviewActivity.START_POS, position);
                     mContext.startActivity(intent);
                 }
             }
@@ -264,7 +266,7 @@ public class ImageGridView extends RelativeLayout {
     }
 
     public void preview() {
-        Intent intent = new Intent(mContext, PhotoPreviewActivity.class);
+        Intent intent = new Intent(mContext, ImagePreviewActivity.class);
         intent.putExtra("photo_list", (ArrayList<PhotoInfo>)getSelectedPhotos());
         mContext.startActivity(intent);
     }

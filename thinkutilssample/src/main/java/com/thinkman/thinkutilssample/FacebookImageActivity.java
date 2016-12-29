@@ -15,8 +15,8 @@ import java.util.List;
 
 public class FacebookImageActivity extends AppCompatActivity {
 
-    public String Image1 = "https://wellcome.ac.uk/sites/default/files/styles/news_lead/public/G3520217_SPL_LeanGenes_200606_600x600.jpg?itok=3G_cT3lu";
-    public String Image2 = "http://rs1054.pbsrc.com/albums/s499/vadimzbanok/1327.jpg~c200";
+    public String Image1 = "http://function-hz.com:8080//upload/31a70bb3-9c08-4feb-aa8c-db2d8af2c236.jpeg";
+    public String Image2 = "ttp://function-hz.com:8080//upload/a40c35cc-5873-49aa-8f02-fdad11d674ec.jpeg";
     public String Image3 = "http://www.pnas.org/site/misc/images/15-02545.500.jpg";
     public String Image4 = "https://s-media-cache-ak0.pinimg.com/736x/7f/47/e4/7f47e4e3f9f3755fcd6012dfe6a7dc12.jpg";
 
@@ -176,7 +176,7 @@ public class FacebookImageActivity extends AppCompatActivity {
         Pathitems.add(i8);
         Pathitems.add(i9);
 
-        for(int i = 0; i < mMaxDisplay_Size;i++)
+        for(int i = 0; i < Pathitems.size();i++)
         {
 
             mPathitems.add(Pathitems.get(i));

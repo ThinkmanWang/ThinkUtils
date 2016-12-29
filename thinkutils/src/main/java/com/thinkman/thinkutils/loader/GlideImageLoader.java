@@ -37,13 +37,13 @@ public class GlideImageLoader implements cn.finalteam.galleryfinal.ImageLoader {
 
     @Override
     public void displayImage(Activity activity, String path, final GFImageView imageView, Drawable defaultDrawable, int width, int height) {
-        if (path.startsWith("http://")) {
+        if (path.startsWith("http://") || path.startsWith("https://")) {
             Glide.with(activity)
                     .load(path)
                     .placeholder(defaultDrawable)
                     .error(defaultDrawable)
                     .override(width, height)
-                    .diskCacheStrategy(DiskCacheStrategy.NONE) //不缓存到SD卡
+                    .diskCacheStrategy(DiskCacheStrategy.ALL) //不缓存到SD卡
                     .skipMemoryCache(true)
                             //.centerCrop()
                     .into(new ImageViewTarget<GlideDrawable>(imageView) {

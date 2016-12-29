@@ -178,6 +178,12 @@
         android:layout_height="wrap_content"
         android:text="Facebook Image"/>
 
+    <Button
+        android:id="@+id/btn_more_textview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="More TextView"/>
+
 
 </LinearLayout>
 
